@@ -8,6 +8,10 @@
     "build": "parcel build index.html"
   },
   "dependencies": {
+    "@types/lodash": "^4.14.175",
+    "@types/ramda": "^0.27.45",
+    "lodash": "^4.17.21",
+    "ramda": "^0.27.1",
     "react-app-polyfill": "^1.0.0"
   },
   "alias": {
