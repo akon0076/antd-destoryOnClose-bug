@@ -1,17 +1,29 @@
 import 'react-app-polyfill/ie11';
 import * as React from 'react';
+import { useState } from 'react';
+import {Button, Modal } from 'antd';
 import { render } from 'react-dom';
-import { Thing } from '../src';
-import { solution, param } from './leetcode';
+import "antd/dist/antd.css";
+
 
 const App = () => {
-  console.log(param, solution);
+  const [visible, setVisible] = useState(false);
   return (
-    <div>
-      <Thing />
-      <h3>input: {JSON.stringify(param)}</h3>
-      <h3>output: {JSON.stringify(solution)}</h3>
-    </div>
+    <>
+    <Button onClick={() => setVisible(true)}>show</Button>
+      <Modal
+        visible={visible}
+        destroyOnClose
+        onCancel={() => setVisible(false)}
+      >
+        {new Array(2000).fill(1).map(() => {
+          return (
+            <div>
+              111<div>23</div>
+            </div>
+          );
+        })}
+      </Modal></>
   );
 };
 
